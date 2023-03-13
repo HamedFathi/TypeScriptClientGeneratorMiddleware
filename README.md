@@ -1,15 +1,24 @@
-For a long time, I was looking for finding a way to connect Back-end and Front-end teams together when they are working on same APIs and time ti time update them.
+For a long time, I have been looking for a way to connect the back-end and front-end teams working on the same APIs.
 
-In this use case, Back-end team provide bunch of APIs then Front-end team should follow them to call APIs correctly but how possible to get correct info from back-end side correctly or update front-end client after some changes?
+In this use case, the back-end team provides a bunch of APIs, then the front-end team should follow them to call APIs correctly, but how is it possible to get the correct info from the back-end side or update the front-end side after some changes frequently?
 
-One good solution is using `Open API or Swagger` as a source of truth but you don't have access to client definitions like TypeScript interfaces, Is it possible to make the process a bit easier?
+One good solution is using `Swagger` as a source of truth. Still, the front-end team needs help accessing client definitions like TypeScript interfaces inside thier applications. Can the process be more straightforward?
 
-Recently, I made an ASP.NET Core middleware based on [NSwag TypeScriptClientGenerator](https://github.com/RicoSuter/NSwag/wiki/TypeScriptClientGenerator).
+Recently, I made an ASP.NET Core middleware based on [NSwag TypeScriptClientGenerator](https://github.com/RicoSuter/NSwag/wiki/TypeScriptClientGenerator) for sharing more fine-grained data from the back-end side to front-end side, so, front-end team can get more info, update their side based on it or even make sure some changes happened or no.
 
-## Installation
+### [Nuget](https://www.nuget.org/packages/TypeScriptClientGeneratorMiddleware)
 
+[![Open Source Love](https://badges.frapsoft.com/os/mit/mit.svg?v=102)](https://opensource.org/licenses/MIT)
+![Nuget](https://img.shields.io/nuget/v/TypeScriptClientGeneratorMiddleware)
+![Nuget](https://img.shields.io/nuget/dt/TypeScriptClientGeneratorMiddleware)
 
-## Usage
+```
+Install-Package TypeScriptClientGeneratorMiddleware
+
+dotnet add package TypeScriptClientGeneratorMiddleware
+```
+
+### Usage
 
 ```cs
 // SERVICES
