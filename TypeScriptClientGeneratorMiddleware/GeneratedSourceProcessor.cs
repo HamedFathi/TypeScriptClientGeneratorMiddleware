@@ -1,4 +1,6 @@
-﻿using System.Text.RegularExpressions;
+﻿using System.Security.Cryptography;
+using System.Text;
+using System.Text.RegularExpressions;
 
 namespace TypeScriptClientGeneratorMiddleware;
 
@@ -23,6 +25,18 @@ public static class GeneratedSourceProcessor
                 result = result.Replace($" {className}", $" {interfaceName}");
             }
         }
-        return result;
+        return "// " + ComputeSha256Hash(result) + "\n" + result;
+    }
+
+    public static string ComputeSha256Hash(string rawData)
+    {
+        using SHA256 sha256Hash = SHA256.Create();
+        byte[] bytes = sha256Hash.ComputeHash(Encoding.UTF8.GetBytes(rawData));
+        StringBuilder builder = new();
+        for (int i = 0; i < bytes.Length; i++)
+        {
+            builder.Append(bytes[i].ToString("x2"));
+        }
+        return builder.ToString();
     }
 }

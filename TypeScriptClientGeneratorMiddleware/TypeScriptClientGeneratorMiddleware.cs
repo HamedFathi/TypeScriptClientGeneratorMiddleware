@@ -27,11 +27,9 @@ public class TypeScriptClientGeneratorMiddleware
                 context.Response.ContentType = "text/plain";
                 context.Response.StatusCode = StatusCodes.Status200OK;
                 await context.Response.WriteAsync(result);
-            }
-            else
-            {
-                await _next(context);
+                return;
             }
         }
+        await _next(context);
     }
 }
