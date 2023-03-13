@@ -39,6 +39,8 @@ builder.Services.AddTypeScriptClientGenerator(options =>
             Process = GeneratedSourceProcessor.ExtractInterfacesAndEnums,
             // You can change the content type if you want. default is "text/plain".
             // ContentType = "application/json"
+            // You can customize NSwag generator too
+            // Settings = ...
         },
         new()
         {
