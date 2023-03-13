@@ -1,0 +1,22 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>netstandard2.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+		<Authors>Hamed Fathi</Authors>
+		<Company />
+		<PublishRepositoryUrl>true</PublishRepositoryUrl>
+		<Version>0.0.1</Version>
+		<LangVersion>latest</LangVersion>
+		<PackageProjectUrl>https://github.com/HamedFathi/TypeScriptClientGeneratorMiddleware</PackageProjectUrl>
+		<RepositoryUrl>https://github.com/HamedFathi/TypeScriptClientGeneratorMiddleware</RepositoryUrl>
+		<PackageLicenseExpression>MIT</PackageLicenseExpression>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Microsoft.AspNetCore.Http.Abstractions" Version="2.2.0" />
+		<PackageReference Include="Microsoft.Extensions.Options" Version="6.0.0" />
+		<PackageReference Include="NSwag.CodeGeneration.TypeScript" Version="13.18.2" />
+	</ItemGroup>
+</Project>
