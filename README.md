@@ -62,7 +62,6 @@ app.UseTypeScriptClientGenerator();
 **Without Process (Full Source Code)**
 
 ![Screenshot_3](https://user-images.githubusercontent.com/8418700/224741163-aa46a289-6485-461e-a5a7-4306d2220f48.png)
-![Screenshot_4](https://user-images.githubusercontent.com/8418700/224741172-d8512694-6737-4182-bf95-8e0418d8ca15.png)
-
+![Screenshot_4](https://user-images.githubusercontent.com/8418700/224753400-ec93a0b1-b23b-4070-bb24-2cfd7a0f34f4.png)
 
 
