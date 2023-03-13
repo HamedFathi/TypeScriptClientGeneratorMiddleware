@@ -24,7 +24,7 @@ public class TypeScriptClientGeneratorMiddleware
                 var generator = new TypeScriptClientGenerator(document, settings);
                 var source = generator.GenerateFile();
                 var result = clientOptions.Process?.Invoke(source) ?? source;
-                context.Response.ContentType = "text/plain";
+                context.Response.ContentType = clientOptions.ContentType;
                 context.Response.StatusCode = StatusCodes.Status200OK;
                 await context.Response.WriteAsync(result);
                 return;
